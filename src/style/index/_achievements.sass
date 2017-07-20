@@ -1,0 +1,63 @@
+.section_achievements
+	margin-top: 120px
+	margin-bottom: 65px
+.achievements
+	display: block
+	width: 30%
+	text-decoration: none
+	position: relative
+	background-color: #f2f2f2
+	padding: 70px 30px 30px
+	&__img
+		position: absolute
+		top: -55px
+		left: 0
+		right: 0
+		transition: all .25s
+		margin: 0 auto
+		width: 110px
+		height: 110px
+		border: 5px solid #fff
+		overflow: hidden
+		border-radius: 10em
+		text-align: center
+		img
+			border-radius: 10em
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			margin: 0 auto
+			transform: translateY(-50%)
+			
+		&_green
+			background-color: #56a54e
+		&_red
+			background-color: #a3433d
+		&_orange
+			background-color: #d17e3b
+	&__title
+		text-align: center
+		color: #172a2f
+		font-weight: 700
+		font-size: 1.875em
+	&__text
+		color: #004c88
+		padding-top: 30px
+		font-size: 1.5em
+		line-height: 1.3
+	
+	&:hover
+		.achievements
+			&__img
+				transform: scale(1.2)
+		
+@media screen and (max-width: 768px)
+	.achievements
+		width: 90%
+		margin: 0 auto
+		margin-bottom: 80px
+		&:last-child
+			margin-bottom: 0
+		&__text
+			text-align: center

@@ -1,0 +1,134 @@
+.head-topline
+  background-color: rgba(255, 255, 255, 0.9)
+  width: 100%
+  height: 60px
+  line-height: 60px
+  &__wrapper
+    +container
+    +clearfix
+  &_index
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 5
+.logo
+  float: left
+  img
+    vertical-align: middle
+.head__join
+  float: right
+  a
+    color: #0f5881
+    font-size: 1.125em
+    text-decoration: none
+    transition: all .25s
+    &:hover
+      color: darken(#0f5881, 5%)
+      
+.head_index
+  position: relative
+  width: 100%
+  min-height: 100vh
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(#060f13, .75)
+    z-index: 2
+.head__video
+  overflow: hidden
+  height: 100vh
+  position: absolute
+  z-index: 1
+  left: 0
+  right: 0
+  video
+    min-height: 100vh
+    width: 100%
+
+.head__content
+  position: absolute
+  z-index: 3
+  text-align: center
+  +container
+  left: 0
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+
+.head__title
+  color: #fff
+  font-weight: 700
+  font-size: 3.125em
+  text-shadow: 1px 3px 3px rgba(5, 28, 38, 0.5)
+.head__button
+  max-width: 370px
+  display: block
+  margin: 0 auto
+  margin-top: 10vh
+  width: 100%
+  height: 80px
+  line-height: 80px
+  background-color: #fff
+  text-decoration: none
+  font-weight: 700
+  color: #051c26
+  font-size: 1.75em
+  transition: all .25s
+  &:hover
+    background-color: darken(#fff, 15%)
+  &:focus
+    background-color: darken(#fff, 5%)
+    
+.head__bottom
+  margin-top: 5vh
+  color: #b4dff2
+  font-weight: 400
+  text-align: center
+  font-size: 1.875em
+
+@media screen and (max-width: 1660px)
+  .head
+    &__video
+      display: none
+@media screen and (max-width: 1170px)
+  .head-topline__wrapper
+    padding: 0 20px
+    
+@media screen and (max-width: 992px)
+  .head
+    &__video
+      display: none
+  .head_index
+    min-height: 100%
+  .head__content
+    position: relative
+    top: 0
+    transform: translateY(0)
+    padding: 80px 0
+    
+@media screen and (max-width: 768px)
+  .head__title
+    font-size: 2.5em
+@media screen and (max-width: 600px)
+  .head__button
+    margin-top: 5vh
+  .head__title
+    font-size: 2.3em
+@media screen and (max-width: 400px)
+  .head__title
+    font-size: 2em
+  .head__bottom
+    font-size: 1.5em
+  .head__button
+    max-width: 280px
+    height: 60px
+    line-height: 60px
+    

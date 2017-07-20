@@ -1,0 +1,77 @@
+.nav
+	text-align: center
+	display: inline-block
+	width: 70%
+	margin: 0 40px
+	&__list
+		list-style-type: none
+		display: flex
+		flex-wrap: nowrap
+		justify-content: space-between
+	&__item
+		float: left
+		width: 25%
+		height: 60px
+		transition: all .25s
+		overflow: hidden
+		z-index: 3
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 60px
+			transition: all .25s
+			height: 60px
+			z-index: 2
+			background-color: rgba(#00467f, .6)
+		a
+			position: relative
+			display: block
+			width: 100%
+			transition: all .25s
+			z-index: 4
+			color: #051c26
+			font-size: 1.125em
+			text-decoration: none
+			transition: all .25s
+		&.active
+			background-color: #00467f
+			a
+				color: #fff
+		&:hover
+			&::after
+				bottom: 0
+			a
+				color: #fff
+		&_mobile
+			display: none
+			
+@media screen and (max-width: 1170px)
+	.nav
+		width: 65%
+@media screen and (max-width: 1020px)
+	.nav
+		width: 62%
+@media screen and (max-width: 992px)
+	.head__join a
+		display: none
+	.nav
+		width: 100%
+		position: absolute
+		margin: 0
+		left: 0
+		top: 60px
+		display: none
+		background-color: #fff
+		&__item
+			float: none
+			display: block
+			width: 100%
+		&__list
+			display: block
+		.nav__item::after
+			display: none
+		&__item:hover
+			background-color: rgba(0, 70, 127, 0.6)

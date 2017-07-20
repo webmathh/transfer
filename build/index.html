@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="style/styles.css"/>
+    <title>Главная</title>
+  </head>
+  <body>
+    <!--Шапка начало для главной страницы-->
+    <header style="background-image: url(img/head_bg.jpg)" class="head head_index">
+      <!--Навигация на главной-->
+      <div class="head-topline head-topline_index">
+        <div class="head-topline__wrapper"><a href="/" class="logo"><img src="img/logo.png" alt="123"/></a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item active"><a href="#">Продукты</a></li>
+              <li class="nav__item"><a href="#">Бизнес</a></li>
+              <li class="nav__item"><a href="#">Здоровье</a></li>
+              <li class="nav__item"><a href="#">Обучение</a></li>
+              <li class="nav__item"><a href="#">О компании</a></li>
+              <li class="nav__item nav__item_mobile"><a href="#">Присоедениться</a></li>
+            </ul>
+          </nav>
+          <div class="head__join"><a href="#">Присоедениться</a></div><a href="#" class="toggle-mnu"><span></span></a>
+        </div>
+      </div>
+      <!-- навигация на главнойй конец-->
+      <!--Видео в шапке-->
+      <div class="head__video">
+        <video autoplay="autoplay" loop="loop" muted="muted">
+          <source src="video/videohead.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <!--Видео в шапке конец-->
+      <!--Шапка контент-->
+      <div class="head__content">
+        <h1 class="head__title">4Life Research - компания прямых продаж<br/>основанная в 1998 году<br/>с продуктами<br/>для здоровья, спорта и жизни.</h1><a href="#" class="head__button">Присоедениться</a>
+        <div class="head__bottom">Работаем по всей России, СНГ и миру.</div>
+      </div>
+      <!--Шапка контент конец-->
+    </header>
+    <!-- Шапка конец для главной страницы-->
+    <!--Первая секция-->
+    <div class="section section_white section_achievements">
+      <div class="section__wrapper section__flex"><a href="#" class="achievements">
+          <div class="achievements__img achievements__img_green"><img src="img/what1.png" alt="123"/></div>
+          <h3 class="achievements__title">Бизнес</h3>
+          <div class="achievements__text">
+            <p>Более 100 000<br/>успешных стартов<br/>о миру</p>
+          </div></a><a href="#" class="achievements">
+          <div class="achievements__img achievements__img_red"><img src="img/what2.png" alt="123"/></div>
+          <h3 class="achievements__title">Здоровье</h3>
+          <div class="achievements__text">
+            <p>Более 30 000<br/>случаев<br/>успешного лечения</p>
+          </div></a><a href="#" class="achievements">
+          <div class="achievements__img achievements__img_orange"><img src="img/what3.png" alt="123"/></div>
+          <h3 class="achievements__title">Обучение</h3>
+          <div class="achievements__text">
+            <p>Бесплатное обучение,<br/>собственные программы<br/>получения новых навыков.</p>
+          </div></a></div>
+    </div>
+    <div class="section section_white section_useful">
+      <h2 class="title title_dark">Кому можем быть полезны?</h2>
+      <div class="section__wrapper section__flex">
+        <div class="useful"></div>
+      </div>
+    </div>
+    <!--Первая секция конец-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
