@@ -1,0 +1,15 @@
+.section.section_white.section_people
+    h2.title.title_dark Эти люди уже изменили свою жизнь
+    .section__wrapper.section__flex.people__wrap
+        -var x = 8;
+        -for (i=1; i<=x; i++)
+            .people
+                img(src='img/people.jpg' alt='123')
+                .people__text
+                    h4 Перл Гонсалес
+                    p боец ММА
+                    a(href='#') Прочитать
+        .people__bottom
+            a(href="#").people__button.people__button_white Все люди
+            a(href='#').people__button.people__button_blue Присоедениться
+

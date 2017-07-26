@@ -5,5 +5,61 @@
 	padding-top: 40px
 .product
 	text-align: center
-	img, span
+	color: #051c26
+	font-size: 1.5em
+	text-decoration: none
+	img
 		display: block
+		max-width: 100%
+		height: auto
+		margin: 0 auto
+	span
+		position: relative
+		display: inline-block
+		overflow: hidden
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0px
+			left: -100%
+			width: 50%
+			height: 2px
+			background-color: #051c26
+			transition: all .25s
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0px
+			right: -100%
+			width: 50%
+			height: 2px
+			background-color: #051c26
+			transition: all .25s
+			
+			
+	&:hover
+		span
+			&::after
+				right: 0
+			&::before
+				left: 0
+@media screen and (max-width: 992px)
+	.section_product
+		padding: 30px 10px
+	.product__wrap
+		flex-wrap: wrap
+	.product
+		width: 33%
+		margin-bottom: 30px
+@media screen and (max-width: 768px)
+	.product__wrap
+		display: block
+	.product
+		max-width: 320px
+		margin: 0 auto 30px
+		width: 100%
+		display: block
+		vertical-align: top
+		
+		&:last-child
+			margin-bottom: 0
