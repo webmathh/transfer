@@ -1,0 +1,78 @@
+.footer
+	&__grey
+		background-color: #ebebeb
+	&__top
+		padding: 30px 0
+	&__wrap
+		max-width: 1170px
+		width: 100%
+		margin: 0 auto
+		display: flex
+		flex-wrap: nowrap
+		justify-content: space-between
+	&__block
+		ul
+			list-style-type: none
+			padding-left: 25px
+			padding-top: 10px
+			li
+				a
+					text-decoration: none
+					color: #0a678f
+					font-size: 1.125em
+					font-weight: 400
+					transition: all .25s
+					&:hover
+						text-decoration: underline
+						color: #007de3
+		&_big
+			width: 40%
+			.footer
+				&__title
+					text-align: center
+				&__social
+					display: flex
+					width: 45%
+					min-width: 260px
+					margin: 0 auto
+					flex-wrap: nowrap
+					justify-content: space-between
+					padding-left: 0
+					padding-top: 20px
+					li
+						a
+							img
+								vertical-align: top
+							&:hover
+								text-decoration: none
+								
+						
+	&__title
+		color: #051c26
+		font-size: 1.25em
+		font-weight: 400
+		
+@media screen and (max-width: 992px)
+	.footer
+		&__wrap
+			flex-wrap: wrap
+		&__block
+			width: 50%
+			text-align: center
+			padding-bottom: 20px
+			&_big
+				width: 100%
+			ul
+				padding-left: 0
+@media screen and (max-width: 480px)
+	.footer
+		&__wrap
+			display: block
+		&__block
+			width: 100%
+			&_big
+				.footer
+					&__social
+						width: 200px
+						min-width: auto
+			
