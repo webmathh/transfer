@@ -1,0 +1,61 @@
+/**
+ * Created by Степан on 02.08.2017.
+ */
+.present
+	position: relative
+	&__wrap
+		position: absolute
+		display: flex
+		top: 50%
+		transform: translateY(-45%)
+		left: 0
+		right: 0
+		max-width: 920px
+		margin: 0 auto
+		padding: 0 10px
+		justify-content: space-between
+	&__item
+		text-align: center
+		width: 33%
+		p
+			font-size: 1.5em
+			color: #051c26
+			font-weight: 400
+			padding-top: 5px
+	&__img
+		width: 120px
+		height: 120px
+		margin: 0 auto
+		background-color: #56a54e
+		border: 5px solid #ffffff
+		-webkit-border-radius: 10em
+		-moz-border-radius: 10em
+		border-radius: 10em
+		position: relative
+		img
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			margin: 0 auto
+			max-width: 100%
+			height: auto
+			transform: translateY(-50%)
+@media screen and (max-width: 992px)
+	.present
+		&__wrap
+			position: relative
+			transform: translateY(-0%)
+			top: 0
+			padding: 30px 10px
+@media screen and (max-width: 768px)
+	.present
+		&__wrap
+			display: block
+		&__item
+			margin-bottom: 10px
+			width: 100%
+		&__img
+			border-color: darken(#fff, 10%)
+			
+	

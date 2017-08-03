@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
 		mainBowerFiles = require('main-bower-files'),
     reload = browserSync.reload;
+var bulkSass = require('gulp-sass-glob-import');
 
 
 var path = {
@@ -97,7 +98,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
-				.pipe(sourcemaps.init())
+        .pipe(bulkSass())
         .pipe(sass({
 						includePaths: [require('node-bourbon').includePaths, require('bourbon-neat').includePaths],
             outputStyle: 'compressed',
@@ -105,7 +106,6 @@ gulp.task('style:build', function () {
         }).on("error", notify.onError()))
         .pipe(prefixer())
         .pipe(cssmin())
-				.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 

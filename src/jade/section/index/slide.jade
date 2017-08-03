@@ -1,0 +1,11 @@
+.section.section_blue.section_slider
+    h2.title.title_dark Награды компании
+    .section__wrapper.slider__wrap
+        .slider__button.slider__button_left
+        .slider__button.slider__button_right
+        .slider__container
+            .slider.owl-carousel.owl-theme
+                -var $item = 10
+                -for ($i = 1; $i<=$item; $i++)
+                    .slider__item
+                        img(src='img/slide.jpg' alt='123')

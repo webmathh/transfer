@@ -1,0 +1,89 @@
+.page__wrapper
+	+container
+	+clearfix
+	padding-top: 50px
+	.aside__mobile
+		display: none
+		background-color: #007de3
+		height: 40px
+		line-height: 40px
+		color: #ffffff
+		cursor: pointer
+		padding: 0 30px
+		font-size: 1.5em
+		background-image: url(../img/down-arrow.png)
+		background-repeat: no-repeat
+		background-position: 97.5% center
+		
+	.aside
+		background-color: #f2f2f2
+		display: inline-block
+		max-width: 270px
+		width: 33.33%
+		vertical-align: top
+		ul
+			list-style-type: none
+			li.active
+				background-color: #007de3
+				a
+					color: #ffffff
+			a
+				padding: 15px 20px
+				display: block
+				width: 100%
+				color: #007de3
+				text-decoration: none
+				font-size: 1em
+				font-weight: 400
+	.page__content
+		display: inline-block
+		width: 76%
+		vertical-align: top
+		padding: 0 20px
+		padding-bottom: 50px
+	.page__text
+		color: #051c26
+		h1,h2,h3,h4,h5,h6
+			text-align: center
+			color: #051c26
+			font-weight: 400
+		p
+			color: #051c26
+			font-weight: 300
+			font-size: 1.2em
+			&:first-letter
+				padding-left: 30px
+		img
+			width: auto
+			height: auto
+			max-width: 100%
+			padding: 20px 0
+			
+@media screen and (max-width: 1170px)
+	.page__wrapper .page__content
+		width: 75%
+	.page__wrapper .aside
+		width: 200px
+@media screen and (max-width: 992px)
+	.page__wrapper .page__content
+		width: 100%
+	.page__wrapper .aside
+		width: 100%
+		max-width: 100%
+		.aside__mobile
+			display: block
+	.page__wrapper
+		padding: 0
+		.aside__nav
+			display: none
+			background-color: #8d8c8a
+			ul
+				li
+					border-bottom: 1px solid #fff
+					a
+						color: #fff
+						padding: 7px 30px
+				li.active
+					background-color: #333333
+				
+@import "shop"

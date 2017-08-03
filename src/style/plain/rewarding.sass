@@ -1,0 +1,122 @@
+.section_rewarding
+	padding-top: 40px
+	padding-left: 10px
+	padding-right: 10px
+.rewarding__wrapper
+	+container
+	padding: 40px 0
+.rewarding__flex
+	display: flex
+	justify-content: space-between
+	align-content: center
+	flex-wrap: wrap
+	
+.rewarding
+	position: relative
+	overflow: hidden
+	display: block
+	img
+		width: 100%
+		height: auto
+		vertical-align: top
+	&_big
+		width: 49%
+		flex-basis: 49%
+		align-self: stretch
+	&_small
+		width: 48%
+		flex-basis: 48%
+		align-content: center
+		align-self: center
+		
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		flex-basis: 49%
+		width: 49%
+		justify-content: space-between
+		
+		
+	&__text
+		position: absolute
+		transition: all .25s
+		left: 0
+		right: 0
+		top: 60%
+		text-align: center
+		padding: 10px
+		height: 100%
+		background-color: rgba(#f2f2f2, .85)
+		&_big
+			text-align: left
+			top: 72%
+			padding: 20px 10px
+		.button__info
+			display: block
+			max-width: 170px
+			width: 100%
+			margin: 0 auto
+			text-decoration: none
+			margin-top: 20px
+			text-align: center
+			background-color: #26abef
+			color: #fff
+			font-size: 1.5em
+		h4
+			color: #051c26
+			font-size: 1.5em
+			font-weight: 700
+		p
+			color: #051c26
+			font-size: 1.3em
+			
+	&:hover
+		.rewarding
+			&__text
+				top: 0
+.asks
+	width: 31%
+
+@media screen and (max-width: 1024px)
+	.rewarding
+		margin: 0 auto
+		&_small
+			margin-bottom: 20px
+		&_big
+			width: 100%
+		&_small
+			flex-basis: 48%
+			width: 48%
+		&__text
+			top: 70%
+			&_big
+				top: 85%
+		&:hover
+			.rewarding__text
+				top: 70%
+				&_big
+					top: 85%
+	.rewarding__flex
+		display: block
+		text-align: center
+	.rewarding__wrap
+		margin: 0 auto
+		width: 100%
+		margin-top: 20px
+
+@media screen and (max-width: 768px)
+	.rewarding
+		&__text
+			top: 50%
+		&:hover
+			.rewarding
+				&__text
+					top: 50%
+		&_small
+			width: 100%
+		&__wrap
+			display: block
+		
+	
+		
+		

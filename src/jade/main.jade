@@ -1,0 +1,63 @@
+extends template
+block title
+	title Главная
+block content
+	//Шапка начало для главной страницы
+	header.head.head_index(style='background-image: url(img/head_bg.jpg)')
+		//Навигация на главной
+		.head-topline.head-topline_index
+			.head-topline__wrapper
+				a(href='/' class='logo')
+					img(src='img/logo.png' alt='123')
+				nav.nav
+					ul.nav__list
+						li.nav__item.active
+							a(href='#') Продукты
+						li.nav__item
+							a(href='#') Бизнес
+						li.nav__item
+							a(href='#') Здоровье
+						li.nav__item
+							a(href='#') Обучение
+						li.nav__item
+							a(href='#') О компании
+						li.nav__item.nav__item_mobile
+							a(href='#') Присоедениться
+				.head__join
+					a(href='#') Присоедениться
+				<a href="#" class="toggle-mnu"><span></span></a>
+
+
+		// навигация на главнойй конец
+		//Видео в шапке
+		.head__video
+			video(autoplay loop muted)
+				source(src="video/videohead.mp4" type="video/mp4")
+		//Видео в шапке конец
+		//Шапка контент
+		.head__content
+			h1.head__title 4Life Research - компания прямых продаж<br/>основанная в 1998 году<br/>с продуктами<br/>для здоровья, спорта и жизни.
+			a(href='#').head__button Присоедениться
+			.head__bottom Работаем по всей России, СНГ и миру.
+		//Шапка контент конец
+	// Шапка конец для главной страницы
+	article.content_index
+		//Первая секция
+		include section/index/first
+		//Конец первой секции
+		//Вторая секция
+		include section/index/useful
+		//Конец второй секции
+		//Третья секция
+		include section/index/product
+		//Конец третьей секции
+		//Четвертая секция
+		include section/index/people
+		//Конец четвертой секции
+		//Пятая секция
+		include section/index/slide
+		//Конец пятой секции
+		//Шестая секция
+		include section/index/form
+		//Шестая пятой секции
+

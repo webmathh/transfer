@@ -1,0 +1,96 @@
+.page__flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	align-content: center
+	
+.shop
+	width: 32%
+	flex-basis: 32%
+	border: 1px solid #f2f2f2
+	text-align: center
+	transition: all .25s
+	margin-bottom: 20px
+	img
+		vertical-align: top
+		width: auto
+		max-width: 100%
+		margin-bottom: 20px
+		height: auto
+	&__wrap
+		position: relative
+		padding-top: 30px
+		overflow: hidden
+	&__text
+		position: absolute
+		left: 0
+		right: 0
+		top: 100%
+		transition: all .25s
+		background-color: rgba(#ffffff, .9)
+		height: 100%
+		text-align: left
+		padding: 10px
+		background-image: url(../img/loop.png)
+		background-repeat: no-repeat
+		background-position: center center
+		font-size: .9em
+		color: #051c26
+		text-decoration: none
+	&__title
+		font-size: 1.1em
+		font-weight: 400
+		margin-bottom: 10px
+		color: #051c26
+	&__price
+		font-weight: 200
+		color: #051c26
+		font-size: 1.1em
+		margin-bottom: 10px
+	&__bottom
+		+clearfix
+		background-color: #f2f2f2
+		padding: 10px 9px
+	&__button
+		transition: all .25s
+		background-color: #fff
+		width: 100px
+		
+		display: block
+		height: 30px
+		line-height: 30px
+		text-decoration: none
+		text-align: center
+		color: #007de3
+		font-weight: 400
+		font-size: .9em
+		&:hover
+			background-color: darken(#fff, 5%)
+		&_more
+			float: left
+		&_buy
+			float: right
+		
+.shop
+	&:hover
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2)
+		.shop
+			&__text
+				top: 0
+				
+@media screen and (max-width: 992px)
+	.page__shop
+		padding-top: 40px
+@media screen and (max-width: 768px)
+	.shop
+		flex-basis: 49%
+		width: 49%
+		&__button
+			width: 120px
+			height: 40px
+			line-height: 40px
+			font-size: 1.1em
+@media screen and (max-width: 550px)
+	.shop
+		flex-basis: 100%
+		width: 100%
