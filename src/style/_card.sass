@@ -1,0 +1,252 @@
+.card__header
+	-webkit-background-size: cover
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+.card
+	&__container
+		+container
+		position: relative
+		min-height: 800px
+	&__slide
+		position: absolute
+		z-index: 1
+		&_center
+			top: 50%
+			left: 40%
+			transform: translateY(-50%) translateX(-50%)
+		&_right
+			top: 60%
+			right: 0%
+			transform: translateY(-50%)
+			
+	&__wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+	&__button
+		cursor: pointer
+		position: absolute
+		width: 20px
+		height: 20px
+		z-index: 4
+		background-color: #051c26
+		-webkit-border-radius: 10em
+		-moz-border-radius: 10em
+		border-radius: 10em
+
+		&:before
+			content: ''
+			width: 32px
+			height: 32px
+			position: relative
+			display: block
+			border: 1px solid #051c26
+			-webkit-border-radius: 10em
+			-moz-border-radius: 10em
+			border-radius: 10em
+			top: -4px
+			left: -6px
+			
+			
+		&_top-right
+			top: 15%
+			left: 49%
+			&::before
+				top: -6px
+				left: -6px
+		&_bottom-right
+			top: 55%
+			left: 79%
+			&::before
+				left: -7px
+				top: -6px
+				
+		&_bottom-left
+			top: 65%
+			right: 52%
+			&::before
+				top: -5px
+				left: -7px
+		&_top-left
+			top: 0
+			left: 0
+			&::before
+				top: -6px
+		&_center-left
+			left: 0
+			top: 50%
+			&::before
+				top: -6px
+			
+		&.active
+			.card__text
+				transform:  translateY(0px)
+			.card__wrapper
+				width: 360px
+				height: auto
+	&__wrapper
+		position: absolute
+		top: 10px
+		width: 0px
+		height: 0
+		overflow: hidden
+		z-index: 100
+		&_right
+			left: 10px
+		&_left
+			right: 10px
+	&__text
+		transition: all .25s
+		background-color: rgba(#051c26, .5)
+		padding: 30px 20px
+		border: 1px solid #051c26
+		color: #ffffff
+		font-weight: 400
+		z-index: 10
+		font-size: 1.2em
+		transform: scale(0)
+		p::first-letter
+			padding-left: 30px
+		&_right
+			transform:  translateX(-360px) translateY(-100%)
+		&_left
+			transform:  translateX(360px) translateY(-100%)
+			
+
+.card
+	&__form
+		position: absolute
+		right: 0
+		top: 50px
+		max-width: 570px
+		width: 100%
+		+clearfix
+	&__title
+		float: left
+		color: #ffffff
+		font-weight: 400
+		font-size: 1.5em
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
+	&__block
+		float: right
+		max-width: 270px
+		width: 100%
+		background-color: #f2f2f2
+		text-align: center
+		
+		h4
+			color: #051c26
+			font-size: 1.2em
+			font-weight: 400
+	&__item
+		+clearfix
+		padding: 20px
+		padding-bottom: 15px
+		select
+			float: left
+			width: 80px
+			height: 35px
+			font-size: 1.4em
+			color: #051c26
+	&__price
+		float: right
+		font-size: 1.5em
+		color: #051c26
+	&__submit
+		width: 100%
+		height: 40px
+		text-align: center
+		display: block
+		color: #fff
+		border: none
+		cursor: pointer
+		background-color: #007de3
+		font-size: 1.5em
+		transition: all .25s
+		font-weight: 400
+		&:hover
+			background-color: darken(#007de3, 10%)
+			
+			
+.tabs
+	+container
+	padding-top: 20px
+	padding-bottom: 20px
+	
+	&__title
+		transition: all .25s
+		background-color: #d7e5f0
+		color: #051c26
+		font-size: 1.5em
+		padding: 0px 30px
+		height: 50px
+		line-height: 50px
+		cursor: pointer
+		position: relative
+		&:hover
+			background-color: #a4c3dd
+		&::before
+			content: ''
+			position: absolute
+			right: 30px
+			top: 50%
+			transform: translateY(-50%)
+			background-image: url(../img/down-arrow.png)
+			background-repeat: no-repeat
+			width: 24px
+			transition: all .25s
+			height: 24px
+	&__list
+		background-color: #fff
+		padding: 10px 30px
+		color: #051c26
+		display: none
+		font-size: 1.1em
+		font-weight: 400
+		&.active
+			display: block
+		
+.tabs__button
+	padding-bottom: 2px
+	&.active
+		.tabs__title
+			background-color: #00467f
+			color: #fff
+			&::before
+				transform: translateY(-50%) rotate(180deg)
+	
+		
+		
+@media screen and (max-width: 992px)
+	.card__form
+		position: relative
+		top: 0
+		margin: 0 auto
+		padding-top: 30px
+	.card__title
+		float: none
+		padding-bottom: 20px
+		text-align: center
+	.card__block
+		float: none
+		margin: 0 auto
+	.card__slide
+		position: relative
+		top: 0
+		left: 0
+		right: 0
+		transform: translateY(0%) translateX(0%)
+		text-align: center
+		padding-top: 20px
+		padding-bottom: 20px
+		img
+			max-width: 100%
+			width: auto
+			height: auto
+	.card__wrap
+		display: none

@@ -60,5 +60,16 @@ jQuery(document).ready(function($) {
     $('.slider__button_right').click(function () {
         slider.trigger('next.owl.carousel');
     });
+    $('.card__button').hover(function () {
+        $('.card__button').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('.tabs__title').click(function (e) {
+        e.preventDefault();
+        $('.tabs__button').removeClass('active');
+        $('.tabs__list').slideUp();
+        $(this).parent().toggleClass('active');
+        $(this).parent().children('.tabs__list').slideToggle();
+    })
 
 });

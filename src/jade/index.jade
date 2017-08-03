@@ -29,34 +29,69 @@ block content
 
 
         // навигация на главнойй конец
-        //Видео в шапке
+        .card
+            header.card__header(style='background-image: url(img/card_bg.jpg)')
+                .card__container
+                    .card__form
+                        h1.card__title Трансфер Фактор Кардио
+                        .card__block
+                            form
+                                h4 Трансфер Фактор Кардио
+                                .card__item
+                                    select.card__select
+                                        option(value='30') 30
+                                        option(value='60') 60
+                                        option(value='90') 90
+                                    .card__price 4 680 Р
+                                .card__bottom
+                                    button.card__submit Купить
+                    .card__slide.card__slide_center
+                        img(src='img/tablet.png' alt='123')
+                        .card__wrap
+                            .card__button.card__button_top-right.active
+                                .card__wrapper.card__wrapper_right
+                                    .card__text.card__text_right
+                                        p Инновационная система контроля качества специально разработанная компанией 4life Research. Стандарт качества лучший в области.
+                            .card__button.card__button_bottom-right
+                                .card__wrapper.card__wrapper_right
+                                    .card__text.card__text_right
+                                        p Инновационная система контроля качества специально разработанная компанией 4life Research. Стандарт качества лучший в области.
+                            .card__button.card__button_bottom-left
+                                .card__wrapper.card__wrapper_left
+                                    .card__text.card__text_left
+                                        p Инновационная система контроля качества специально разработанная компанией 4life Research. Стандарт качества лучший в области.
+                    .card__slide.card__slide_right
+                        img(src='img/product5.png' alt='123')
+                        .card__wrap
+                            .card__button.card__button_top-left
+                                .card__wrapper.card__wrapper_left
+                                    .card__text.card__text_left
+                                        p Инновационная система контроля качества специально разработанная компанией 4life Research. Стандарт качества лучший в области.
+                            .card__button.card__button_center-left
+                                .card__wrapper.card__wrapper_left
+                                    .card__text.card__text_left
+                                        p Инновационная система контроля качества специально разработанная компанией 4life Research. Стандарт качества лучший в области
+            atricle.card__body
+                .tabs
+                    .tabs__button.active
+                        .tabs__title Описание
+                        .tabs__list.active
+                            p Сертифицированный 4Life Transfer Factor ® и дополнительные ингредиенты для поддержки баланса и поддержки реакции иммунной системы *
+                            p Первичная поддержка: иммунная система, общее состояние здоровья *
+                    .tabs__button
+                        .tabs__title Описание
+                        .tabs__list
+                            p Сертифицированный 4Life Transfer Factor ® и дополнительные ингредиенты для поддержки баланса и поддержки реакции иммунной системы *
+                            p Первичная поддержка: иммунная система, общее состояние здоровья *
+            section.section_white.section_other
+                h2.title.title_dark Продукты которые могут быть вам интересны:
+                .section__wrapper.other__flex
+                    -var $item =4;
+                    -for ($i = 1; $i <= $item; $i++)
+                        a(href='#').other
+                            img(src='img/product5.png' alt='123')
+                            h4 Трансфер Фактор Плюс
+                            .other__price 4 350 Р
 
 
 
-        .page__wrapper
-            aside.aside
-                .aside__mobile План работы
-                nav.aside__nav
-                    ul
-                        li
-                            a(href="#") План работы
-                        li.active
-                            a(href="#") Награждение
-                        li
-                            a(href="#") Мероприятия
-                        li
-                            a(href="#") Подать заявку
-            .page__content
-                .page__shop.page__flex
-                    -var $k = 12;
-                    -for ($i = 1; $i<=$k; $i++)
-                        .shop
-                            .shop__wrap
-                                img(src='img/shop1.png' alt='123')
-                                h3.shop__title Трансфер Фактор Плюс
-                                .shop__price 4 290 Р
-                                a(href='#').shop__text
-                                    p Продукт иммунной системы, который был показан в исследовании in vitro для повышения активности естественных киллерных клеток до 283% *
-                            .shop__bottom
-                                a(href='#').shop__button.shop__button_more Описание
-                                a(href='#' data-shop='#').shop__button.shop__button_buy Купить
