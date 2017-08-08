@@ -31,7 +31,19 @@ block content
         // навигация на главнойй конец
         .card
             header.card__header(style='background-image: url(img/card_bg.jpg)')
-                .card__container
+                .card__container.page__wrapper
+                    aside.aside
+                        .aside__mobile План работы
+                        nav.aside__nav
+                            ul
+                                li
+                                    a(href="#") План работы
+                                li.active
+                                    a(href="#") Награждение
+                                li
+                                    a(href="#") Мероприятия
+                                li
+                                    a(href="#") Подать заявку
                     .card__form
                         h1.card__title Трансфер Фактор Кардио
                         .card__block

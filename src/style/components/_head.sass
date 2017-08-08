@@ -22,13 +22,39 @@
     vertical-align: middle
 .head__join
   float: right
+  overflow: hidden
   a
     color: #0f5881
     font-size: 1.125em
     text-decoration: none
     transition: all .25s
+    overflow: hidden
+    position: relative
+    &::before
+      content: ''
+      bottom: 0
+      height: 1px
+      width: 50%
+      left: -100px
+      transition: all .25s
+      background-color: #0f5881
+      position: absolute
+    &::after
+      content: ''
+      bottom: 0
+      height: 1px
+      width: 50%
+      right: -100px
+      transition: all .25s
+      background-color: #0f5881
+      position: absolute
     &:hover
       color: darken(#0f5881, 5%)
+      &::before
+        left: 0
+      &::after
+        right: 0
+      
       
 .head_index
   position: relative
