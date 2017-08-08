@@ -70,6 +70,22 @@ jQuery(document).ready(function($) {
         $('.tabs__list').slideUp();
         $(this).parent().toggleClass('active');
         $(this).parent().children('.tabs__list').slideToggle();
+    });
+
+    //Открытие форм
+    $('.modal__open').click(function (event) {
+       event.preventDefault();
+       var theme = $(this).attr('data-theme');
+       var title = $(this).attr('data-title');
+       $('.modal').fadeIn();
+       $(".modal input[name='theme']").val(theme);
+       $('.modal .modal__title').text(title);
+       return false;
+    });
+    //Закрытие форм
+    $('.modal__cross').click(function (event) {
+        event.preventDefault();
+        $('.modal').fadeOut();
     })
 
 });

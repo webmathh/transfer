@@ -1,0 +1,19 @@
+.modal.modal__buy
+    .modal__wrapper
+        .modal__content
+            .modal__cross
+            h2.modal__title Купить
+            form.modal__form
+                .modal__item
+                    input(type='text' placeholder='ФИО' name='name' required)
+                .modal__item
+                    input(type='text' placeholder='Город' name='city' required)
+                .modal__item
+                    input(type='mail' placeholder='Электронный адрес' name='mail' required)
+                .modal__item.modal__item_phone
+                    input(type='tel' placeholder='Телефон' name='tel' required)
+                .modal__text
+                    p Заполняя данную форму, вы принимаете условия <a href='#'>“Соглашения об использовании сайта”</a> раздела персональных данных
+                .modal__item
+                    input(type='hidden' name='theme')
+                    button(type='submit') Отправить

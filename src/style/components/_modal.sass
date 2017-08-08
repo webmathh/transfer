@@ -1,0 +1,81 @@
+.modal
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  height: 100%
+  display: none
+  width: 100%
+  background-color: rgba(#fff, .9)
+  overflow: auto
+  &__wrapper
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    right: 0
+    margin: 0 auto
+    max-width: 570px
+    width: 100%
+    background-color: #00467f
+  &__title
+    text-align: center
+    font-size: 22px
+    color: #ffffff
+    font-weight: 700
+  &__content
+    max-width: 360px
+    margin: 0 auto
+    width: 100%
+    padding: 35px 0
+  &__cross
+    width: 37px
+    height: 37px
+    background-repeat: no-repeat
+    background-image: url(../img/cross.png)
+    background-position: center
+    position: absolute
+    top: 25px
+    right: 25px
+    cursor: pointer
+  &__item
+    padding-bottom: 20px
+    &:last-child
+      padding-bottom: 0
+    &_phone
+      padding-bottom: 10px
+  &__text
+    padding-bottom: 10px
+    color: #d4dade
+    font-size: 16px
+    a
+      color: #d4dade
+      text-decoration: none
+      &:hover
+        color: darken(#d4dade, 10%)
+  &__form
+    padding-top: 15px
+    input, button
+      width: 100%
+    input
+      height: 50px
+      line-height: 50px
+      padding: 0 10px
+      font-size: 18px
+      font-weight: 300
+      color: #000
+      &::placeholder
+        color: #051c26
+    button
+      text-align: center
+      transition: all .25s
+      color: #fff
+      font-weight: 400
+      font-size: 20px
+      height: 45px
+      line-height: 40px
+      cursor: pointer
+      border: none
+      background-color: #007de3
+      &:hover
+        background-color: darken(#007de3, 10%)

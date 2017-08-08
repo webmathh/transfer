@@ -22,10 +22,10 @@
               <li class="nav__item"><a href="#">Здоровье</a></li>
               <li class="nav__item"><a href="#">Обучение</a></li>
               <li class="nav__item"><a href="#">О компании</a></li>
-              <li class="nav__item nav__item_mobile"><a href="#">Присоедениться</a></li>
+              <li class="nav__item nav__item_mobile"><a href="#" data-theme="Присоедениться" data-title="Присоедениться" class="modal__open">Присоедениться</a></li>
             </ul>
           </nav>
-          <div class="head__join"><a href="#">Присоедениться</a></div><a href="#" class="toggle-mnu"><span></span></a>
+          <div class="head__join"><a href="#" data-theme="Присоедениться" data-title="Присоедениться" class="modal__open">Присоедениться</a></div><a href="#" class="toggle-mnu"><span></span></a>
         </div>
       </div>
       <!-- навигация на главнойй конец-->
@@ -57,7 +57,7 @@
                     <div class="card__price">4 680 Р</div>
                   </div>
                   <div class="card__bottom">
-                    <button class="card__submit">Купить</button>
+                    <button data-theme="Купить Трансфер Фактор Кардио" data-title="Купить" class="card__submit modal__open">Купить</button>
                   </div>
                 </form>
               </div>
@@ -200,6 +200,35 @@
       </div>
     </footer>
     <!--Конец подвала-->
+    <div class="modal modal__buy">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <div class="modal__cross"></div>
+          <h2 class="modal__title">Купить</h2>
+          <form class="modal__form">
+            <div class="modal__item">
+              <input type="text" placeholder="ФИО" name="name" required="required"/>
+            </div>
+            <div class="modal__item">
+              <input type="text" placeholder="Город" name="city" required="required"/>
+            </div>
+            <div class="modal__item">
+              <input type="mail" placeholder="Электронный адрес" name="mail" required="required"/>
+            </div>
+            <div class="modal__item modal__item_phone">
+              <input type="tel" placeholder="Телефон" name="tel" required="required"/>
+            </div>
+            <div class="modal__text">
+              <p>Заполняя данную форму, вы принимаете условия <a href='#'>“Соглашения об использовании сайта”</a> раздела персональных данных</p>
+            </div>
+            <div class="modal__item">
+              <input type="hidden" name="theme"/>
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

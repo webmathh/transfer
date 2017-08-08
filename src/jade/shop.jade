@@ -22,9 +22,9 @@ block content
                         li.nav__item
                             a(href='#') О компании
                         li.nav__item.nav__item_mobile
-                            a(href='#') Присоедениться
+                            a(href='#').modal__open(data-theme='Присоедениться' data-title='Присоедениться') Присоедениться
                 .head__join
-                    a(href='#') Присоедениться
+                    a(href='#').modal__open(data-theme='Присоедениться' data-title='Присоедениться') Присоедениться
                 <a href="#" class="toggle-mnu"><span></span></a>
 
 
@@ -59,4 +59,4 @@ block content
                                     p Продукт иммунной системы, который был показан в исследовании in vitro для повышения активности естественных киллерных клеток до 283% *
                             .shop__bottom
                                 a(href='#').shop__button.shop__button_more Описание
-                                a(href='#' data-shop='#').shop__button.shop__button_buy Купить
+                                a(href='#' data-shop='#').shop__button.shop__button_buy(data-theme='Купить Трансфер Фактор Кардио' data-title='Купить').modal__open Купить
