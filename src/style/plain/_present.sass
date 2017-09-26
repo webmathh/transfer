@@ -31,6 +31,7 @@
 		-webkit-border-radius: 10em
 		-moz-border-radius: 10em
 		border-radius: 10em
+		transition: all .25s
 		position: relative
 		img
 			position: absolute
@@ -41,6 +42,11 @@
 			max-width: 100%
 			height: auto
 			transform: translateY(-50%)
+.present__item:hover
+	.present
+		&__img
+			transform: scale(1.2)
+
 @media screen and (max-width: 992px)
 	.present
 		&__wrap

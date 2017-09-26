@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
        if($(document).width() > 992 ) {
            $('.nav__item_mobile').hide();
            $('.nav').css('display', 'inline-block');
+           $('.aside__nav').show();
 
        }
        else {
@@ -86,6 +87,18 @@ jQuery(document).ready(function($) {
     $('.modal__cross').click(function (event) {
         event.preventDefault();
         $('.modal').fadeOut();
-    })
+    });
+    $(document).mouseup(function (e) {
+        var elem = $('.modal');
+        var elems = $('.modal-form__wrapper');
+        if (!elems.is(e.target)
+            && elems.has(e.target).length === 0) {
+            $('.modal').fadeOut();
+        }
+    });
+    $('.card__select').change(function () {
+       var price = $('.card__select option:selected').attr('data-price');
+       $('.card__price').text(price+' Р');
+    });
 
 });
