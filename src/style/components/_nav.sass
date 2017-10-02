@@ -1,3 +1,5 @@
+.mobile__join
+	display: none
 .nav
 	text-align: center
 	display: inline-block
@@ -57,6 +59,21 @@
 @media screen and (max-width: 992px)
 	.head__join a
 		display: none
+	.mobile__join
+		display: inline-block
+		position: absolute
+		margin: 0 auto
+		left: 0
+		right: 0
+		text-align: center
+		max-width: 200px
+
+		a
+			text-decoration: none
+			color: #0f5881
+			font-size: 1.125em
+			position: relative
+			top: 3px
 	.nav
 		width: 100%
 		position: absolute
@@ -75,3 +92,6 @@
 			display: none
 		&__item:hover
 			background-color: rgba(0, 70, 127, 0.6)
+@media screen and (max-width: 450px)
+	.mobile__join
+		display: none

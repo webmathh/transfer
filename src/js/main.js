@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
     });
     $(document).mouseup(function (e) {
         var elem = $('.modal');
-        var elems = $('.modal-form__wrapper');
+        var elems = $('.modal__wrapper');
         if (!elems.is(e.target)
             && elems.has(e.target).length === 0) {
             $('.modal').fadeOut();
@@ -99,6 +99,15 @@ jQuery(document).ready(function($) {
     $('.card__select').change(function () {
        var price = $('.card__select option:selected').attr('data-price');
        $('.card__price').text(price+' Р');
+    });
+    $(function () {
+        $('.aside__nav a').each(function () {
+            var location = window.location.href;
+            var link = this.href;
+            if (location == link) {
+                $(this).parent().addClass('active');
+            }
+        });
     });
 
 });

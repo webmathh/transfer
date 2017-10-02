@@ -168,7 +168,11 @@
 @media screen and (max-width: 1660px)
   .head
     &__video
-      display: none
+      video
+        width: auto
+        height: auto
+        min-width: 100%
+        min-height: 100%
 @media screen and (max-width: 1170px)
   .head-topline__wrapper
     padding: 0 20px
@@ -202,4 +206,21 @@
     max-width: 280px
     height: 60px
     line-height: 60px
-    
+
+@media (min-aspect-ratio: 16/9)
+  .head__video video
+    height: 300%
+    top: -100%
+
+@media (max-aspect-ratio: 16/9)
+  .head__video video
+    width: 300%
+    left: -100%
+/* Если есть поддержка object-fit (Chrome/Chrome для Android, Safari в iOS 8 и Opera), используем его: */
+@supports (object-fit: cover)
+  .head__video video
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
