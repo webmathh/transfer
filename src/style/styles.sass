@@ -27,4 +27,23 @@ body
 @import "text/main"
 @import "card"
 @import "other"
+.toTop
+	position: fixed
+	z-index: 10000
+	bottom: 20px
+	left: 20px
+	width: 60px
+	height: 60px
+	background-image: url(../img/ArrowUP.svg)
+	background-repeat: no-repeat
+	background-position: center
+	-webkit-border-radius: 10em
+	-moz-border-radius: 10em
+	border-radius: 10em
+	overflow: hidden
+	cursor: pointer
+	transition: all .25s
+	opacity: .75
+	&:hover
+		opacity: 1
 @import "components/modal"

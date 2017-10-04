@@ -1,4 +1,16 @@
 jQuery(document).ready(function($) {
+    //Кнопка наверх
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},500);
+    });
 	//Тогле меню
     $(".toggle-mnu").click(function() {
         $(this).toggleClass("on");
